@@ -7,13 +7,13 @@ window.onload = () => {
   canvas.setAttribute('style', 'border: 1px solid black');
 
   canvasContext = canvas.getContext('2d');  
-  canvasContext.fillStyle = 'gray';
+  canvasContext.fillStyle = 'white';
   canvasContext.fillRect(0, 0, canvas.width, canvas.height);
   grid(canvas.width, canvas.height);
 
-  // canvasContext.beginPath();
-  // canvasContext.arc(canvas.width/2, canvas.height/2, 0.05*canvas.height, 0, 2*Math.PI);
-  // canvasContext.stroke();
+  canvasContext.beginPath();
+  canvasContext.arc(canvas.width/2, canvas.height/2, 0.05*canvas.height, 0, 2*Math.PI);
+  canvasContext.stroke();
 }
 
 const gridY = (width) => {
@@ -29,8 +29,8 @@ const gridX = (height) => {
 }
 
 const grid = (width, height) => {
-  for(let i = 0; i < width; i += 0.1*width) {
-    for(let j = 0; j < height; j += 0.1*height) {
+  for(let i = 0; i <= width; i += 0.1*width) {
+    for(let j = 0; j <= height; j += 0.1*height) {
       gridY(i);
       gridX(j);
     }
