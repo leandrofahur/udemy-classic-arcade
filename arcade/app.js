@@ -2,9 +2,9 @@
 let canvas;
 let canvasContext;
 let ballX = 50;
-let ballSpeedX = 7;
+let ballSpeedX = 10;
 let ballY = 50;
-let ballSpeedY = 5;
+let ballSpeedY = 4;
 
 const PADDLE_HEIGHT = 100;
 const PADDLE_THICKNESS = 10;
